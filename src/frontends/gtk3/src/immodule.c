@@ -234,7 +234,11 @@ gboolean filter_keypress(GtkIMContext *im, EventType *key) {
   guint16 code = key->hardware_keycode;
   guint keyval = key->keyval;
   GdkModifierType state = key->state;
-  GdkDevice* device = gdk_event_get_device((GdkEvent*)key);
+  #if GTK_CHECK_VERSION(3, 0, 0)
+    GdkDevice* device = gdk_event_get_device((GdkEvent*)key);
+  #else
+    GdkDevice* device = NULL;
+  #endif
 #endif
 
   // delayed event

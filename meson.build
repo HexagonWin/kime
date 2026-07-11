@@ -160,6 +160,9 @@ if get_option('install_docs')
 endif
 
 # Conditional frontend builds
+if get_option('gtk2').allowed()
+  subdir('src/frontends/gtk2')
+endif
 if get_option('gtk3').allowed()
   subdir('src/frontends/gtk3')
 endif

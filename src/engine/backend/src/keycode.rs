@@ -229,13 +229,15 @@ impl KeyCode {
 
             9 => Some(Self::Esc),
             100 => Some(Self::Henkan),
-            102 => Some(Self::Muhenkan),
+            //102 => Some(Self::Muhenkan),
             64 => Some(Self::AltL),
             108 => Some(Self::AltR),
             133 => Some(Self::SuperL),
             134 => Some(Self::SuperR),
-            122 | 130 => Some(Self::Hangul),
-            121 | 123 | 131 => Some(Self::HangulHanja),
+            //122 | 130 => Some(Self::Hangul),
+            122 | 130 | 101 => Some(Self::Hangul),
+            //121 | 123 | 131 => Some(Self::HangulHanja),
+            121 | 123 | 131 | 102 => Some(Self::HangulHanja),
 
             113 => Some(Self::Left),
             114 => Some(Self::Right),

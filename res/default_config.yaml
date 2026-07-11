@@ -6,7 +6,7 @@ daemon:
 indicator:
   icon_color: Black
 log:
-  global_level: DEBUG
+  global_level: ERROR
 engine:
   translation_layer: null
   default_category: Latin
@@ -91,8 +91,6 @@ engine:
     word_commit: false
     preedit_johab: Needed
     addons:
-      all:
-      - ComposeChoseongSsang
       dubeolsik:
       - TreatJongseongAsChoseong
       sebeolsik-3sin-p2:

@@ -130,7 +130,7 @@ pub struct LogConfig {
 impl Default for LogConfig {
     fn default() -> Self {
         Self {
-            global_level: log::LevelFilter::Debug,
+            global_level: log::LevelFilter::Error,
         }
     }
 }

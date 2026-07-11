@@ -63,7 +63,6 @@ impl Default for HangulConfig {
             word_commit: false,
             preedit_johab: PreeditJohabLevel::default(),
             addons: vec![
-                ("all".into(), Addon::ComposeChoseongSsang.into()),
                 ("dubeolsik".into(), Addon::TreatJongseongAsChoseong.into()),
                 (
                     "sebeolsik-3sin-p2".into(),

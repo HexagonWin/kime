@@ -367,10 +367,20 @@ void get_preedit_string(GtkIMContext *im, gchar **out, PangoAttrList **attrs,
     *attrs = pango_attr_list_new();
 
     if (out && ctx->preedit_visible && s.len) {
-      PangoAttribute *attr = pango_attr_underline_new(PANGO_UNDERLINE_SINGLE);
-      attr->start_index = 0;
-      attr->end_index = s.len;
-      pango_attr_list_insert(*attrs, attr);
+      //PangoAttribute *attr = pango_attr_underline_new(PANGO_UNDERLINE_SINGLE);
+      //attr->start_index = 0;
+      //attr->end_index = s.len;
+      //pango_attr_list_insert(*attrs, attr);
+
+      PangoAttribute *fg = pango_attr_foreground_new(0xeeee, 0, 0);
+      fg->start_index = 0;
+      fg->end_index = s.len;
+      pango_attr_list_insert(*attrs, fg);
+
+      PangoAttribute *bg = pango_attr_background_new(0xFFFF, 0xFFFF, 0xFFFF);
+      bg->start_index = 0;
+      bg->end_index = s.len;
+      pango_attr_list_insert(*attrs, bg);
     }
   }
 }
